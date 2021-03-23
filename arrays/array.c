@@ -50,3 +50,30 @@ int binary_search(int *arr, int val, size_t n)
         }
         return NOVAL;
 }
+
+int inter_search(int *arr, int val, size_t n)
+{
+        short l, r, k; //lewa, prawa granica, kolejny indeks
+        float coeff; //współczynnik interpolacji
+        int tmp;
+        l = 0;
+        r = n - 1;
+        coeff = (val - arr[l]) / (arr[r] - arr[l]);
+        if (coeff > 1 || coeff < 0)
+                goto exit;
+        do {
+                k = l + coeff * (r - l);
+                tmp = arr[k];
+                if (tmp == val)
+                        return k;
+                
+                if (tmp < val)
+                        l = k + 1;
+                else 
+                        r = k - 1;
+
+                coeff = (val - arr[l]) / (arr[r] - arr[l]);
+        } while (coeff < 1 || coeff > 0);
+exit:
+        return NOVAL;
+}

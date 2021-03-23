@@ -13,6 +13,7 @@ int main(void)
         int x = search(arr, key, n);
         x = sentinel_search(arr, key, n);
         x = binary_search(inorder, 20, n);
+        x = inter_search(inorder, 50, n);
         int tmp = 0;
 
         return 0;
