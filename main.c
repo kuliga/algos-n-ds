@@ -1,7 +1,7 @@
 #include "stdlib.h"
 #include "linked-lists/single_linked_list.c"
 #include "arrays/array.c"
-
+#include "libsort/sort.c"
 
 
 int main(void)
@@ -14,7 +14,7 @@ int main(void)
         x = sentinel_search(arr, key, n);
         x = binary_search(inorder, 20, n);
         x = inter_search(inorder, 50, n);
-        int tmp = 0;
-
-        return 0;
+        int tmp= 0;
+	selsort(arr, n);
+	return 0;
 }

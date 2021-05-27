@@ -42,15 +42,15 @@ void insert(struct node* prev, int val)
         prev->next = p;
 }
 
-void insert_list_entry(struct node **head, int seek_val, int val)
+void insert_list_entry(struct node *head, int seek_val, int val)
 {
-        struct node *i = *head;
+        struct node *i = head;
         while (i->val != seek_val)
                 i = i->next;
         insert(i, val);
 }
 
-void append_list_entry(struct node **head, int val)
+void append_list_entry(struct node *head, int val)
 {
         //allocate memory for a new node
         struct node *p = malloc(sizeof(struct node));
@@ -58,7 +58,7 @@ void append_list_entry(struct node **head, int val)
         p->val = val;
         p->next = NULL;
         //indirect pointer
-        struct node *i = *head;
+        struct node *i = head;
         //no entry yet
         if (i == NULL) {
                 i = p;
@@ -72,9 +72,9 @@ void append_list_entry(struct node **head, int val)
 }
 
 //delete node functions
-int remove_list_entry(struct node **head, int val)
+int remove_list_entry(struct node *head, int val)
 {
-        struct node *i = *head;
+        struct node *i = head;
         struct node *prev = NULL;
 
         //walk the list
