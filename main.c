@@ -15,6 +15,7 @@ int main(void)
         x = binary_search(inorder, 20, n);
         x = inter_search(inorder, 50, n);
         int tmp= 0;
-	selsort(arr, n);
+//	selsort(arr, n);
+	inssort(arr, n);
 	return 0;
 }

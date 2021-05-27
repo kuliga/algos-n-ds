@@ -1,4 +1,4 @@
-#include <stdio.h>
+
 #include <stdlib.h>
 
 #define SWAP(type, a, b) 	\
@@ -22,6 +22,21 @@ void selsort(int *arr, size_t len)
 		SWAP(int, arr[i], arr[idxofmin]);
 	}
 }		
+
+void inssort(int *arr, size_t len)
+{
+	int tmp;
+	for (size_t i = 1; i < len; i++) {
+		tmp = arr[i];
+		size_t j = i - 1;
+		while ((j > 0) && (tmp < arr[j])) {
+			arr[j + 1] = arr[j];
+			j--;
+		}
+		arr[j + 1] = tmp;
+	}
+}
+
 
 
 
