@@ -1,0 +1,6 @@
+*.json
+*.out
+!*/*.c
+!*/*.h
+!.gitignore 
+
