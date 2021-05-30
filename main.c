@@ -1,7 +1,7 @@
 #include "stdlib.h"
 #include "linked-lists/single_linked_list.c"
-#include "arrays/array.c"
-#include "libsort/sort.c"
+#include "sortlib/sort.c"
+#include "searchlib/search.c"
 
 
 int main(void)

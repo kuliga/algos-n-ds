@@ -9,7 +9,6 @@
 	} while (0)
 		
 
-
 void selsort(int *arr, size_t len)
 {	
 	size_t idxofmin = 0;
@@ -37,6 +36,13 @@ void inssort(int *arr, size_t len)
 	}
 }
 
+void bubsort(int *arr, size_t n)
+{
 
+
+
+
+
+}
 
 
